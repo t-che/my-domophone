@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0; /* Убираем стандартные отступы body */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Устанавливаем максимальную ширину контейнера */
+}
+
+.keypad {
+    width: 100%; /* Растягиваем на всю ширину родителя*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #f9f9f9; /* Более светлый фон */
+    border-radius: 10px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень внутрь */
+    padding: 10px; /* Добавляем отступы внутри сетки */
+    margin-bottom: 20px; /* Добавляем отступ снизу */
+}
+
+.key {
+    background-color: #e0e0e0;
+    border: 1px solid #d0d0d0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em; /* Больше размер шрифта*/
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none; /* Запрещаем выделение текста */
+    transition: background-color 0.2s ease;
+}
+
+.key:active {
+    background-color: #cccccc;
+}
+
+.key.special {
+    background-color: #f0f0f0;
+    color: #007bff;
+}
+
+#door {
+    width: 100%; /* Дверь на всю ширину контейнера */
+    height: 60px; /* Увеличиваем высоту*/
+    background-color: #ccc;
+    margin-top: 15px; /* Уменьшаем отступ сверху */
+    border-radius: 8px; /* Закругленные углы */
+    text-align: center;
+    line-height: 60px; /* Центрируем текст по высоте */
+    font-size: 1.3em; /* Увеличиваем размер шрифта */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#door.open {
+    background-color: green;
+    color: white;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+    min-height: 20px; /* Задаем минимальную высоту */
+}
+
+.hint-container {
+    width: 100%; /* Подсказка на всю ширину контейнера */
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic; /* Курсивный шрифт для подсказки */
+}
+.code-display-container {
+  width: 100%; /* Контейнер для кода на всю ширину*/
+  text-align: center; /* Текст по центру */
+  margin-bottom: 10px; /* Отступ снизу */
+  min-height: 30px; /* Минимальная высота */
+}
+
+#code-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block; /* Для корректного отступа */
+}
