@@ -2,8 +2,7 @@
 
 Этот проект представляет собой простую, но занимательную веб-реализацию домофона, написанную на HTML, CSS и JavaScript. Пользователи могут вводить код с помощью интерактивной клавиатуры, чтобы попытаться открыть дверь.
 
-Demo:
-https://codepen.io/pen?template=OPLKPWW
+<a href="https://codepen.io/t_che/pen/OPLKPWW" target="_blank">Demo</a>
 
 
 ## Как использовать
